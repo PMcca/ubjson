@@ -14,12 +14,13 @@ require (
 	github.com/mreiferson/go-ujson v0.0.0-20160507014224-e88340868a14
 	github.com/pquerna/ffjson v0.0.0-20190930134022-aa0246cd15f7
 	github.com/stretchr/testify v1.4.0
-	github.com/toitware/ubjson v0.0.0-20211207075236-aa4add2fcd1a
 )
 
 require (
+	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
 	github.com/davecgh/go-spew v1.1.0 // indirect
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b // indirect
+	github.com/kr/pretty v0.3.1 // indirect
 	github.com/pkg/errors v0.8.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	gopkg.in/yaml.v2 v2.2.2 // indirect

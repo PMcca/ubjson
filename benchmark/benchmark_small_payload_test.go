@@ -1,6 +1,6 @@
 /*
-   Each test should process 190 byte http log like json record
-   It should read multiple fields
+Each test should process 190 byte http log like json record
+It should read multiple fields
 */
 package benchmark
 
@@ -9,6 +9,7 @@ import (
 	"testing"
 
 	"github.com/Jeffail/gabs"
+	"github.com/PMcca/ubjson"
 	"github.com/a8m/djson"
 	"github.com/antonholmquist/jason"
 	"github.com/bitly/go-simplejson"
@@ -18,7 +19,6 @@ import (
 	jlexer "github.com/mailru/easyjson/jlexer"
 	"github.com/mreiferson/go-ujson"
 	"github.com/pquerna/ffjson/ffjson"
-	"github.com/toitware/ubjson"
 
 	// "fmt"
 	"bytes"
@@ -29,7 +29,7 @@ import (
 func nothing(_ ...interface{}) {}
 
 /*
-   github.com/buger/jsonparser
+github.com/buger/jsonparser
 */
 func BenchmarkJsonParserSmall(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -160,7 +160,7 @@ func BenchmarkJsonParserDelSmall(b *testing.B) {
 }
 
 /*
-   encoding/json
+encoding/json
 */
 func BenchmarkEncodingJsonStructSmall(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -269,7 +269,7 @@ func BenchmarkJasonSmall(b *testing.B) {
 }
 
 /*
-   github.com/mreiferson/go-ujson
+github.com/mreiferson/go-ujson
 */
 func BenchmarkUjsonSmall(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -285,7 +285,7 @@ func BenchmarkUjsonSmall(b *testing.B) {
 }
 
 /*
-   github.com/a8m/djson
+github.com/a8m/djson
 */
 func BenchmarkDjsonSmall(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -295,7 +295,7 @@ func BenchmarkDjsonSmall(b *testing.B) {
 }
 
 /*
-   github.com/mailru/easyjson
+github.com/mailru/easyjson
 */
 func BenchmarkEasyJsonSmall(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -308,7 +308,7 @@ func BenchmarkEasyJsonSmall(b *testing.B) {
 }
 
 /*
-   github.com/jmank88/ubjson
+github.com/jmank88/ubjson
 */
 func BenchmarkJmank88UbjsonSmall(b *testing.B) {
 	for i := 0; i < b.N; i++ {
